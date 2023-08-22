@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,37 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Scroll Smooth script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 mb-5" data-bs-theme="dark">
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 mb-5" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/favicon-32x32.png" alt="Logo" class="img-fluid">CreativeNexa</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -32,7 +61,7 @@
                     <a class="nav-link" href="#">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Serviços</a>
+                    <a class="nav-link" href="#">Parceiros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contato</a>
@@ -52,41 +81,92 @@
                       <li><a class="dropdown-item" href="https://github.com/" target="_blank">Miguel</a></li>
                   </ul>
               </li>
-              
             </ul>
         </div>
     </div>
 </nav>
+<!-- /Navbar -->
 
-<div class="container m-auto">
-    <div class="row">
-        <div class="newspaper-article">
-          <h1 class="h1 article-title">Bem-vindo(a) ao <span class="mediumseagreen">CreativeNexa</span></h1>
-              <div class="article-content">
-                <p>Nosso espaço educacional dedicado a professores! Aqui, unimos experiência e inovação. Atualize seu conhecimento com conteúdos acadêmicos recentes e descubra maneiras cativantes de interagir com seus alunos. Junte-se a nós na jornada de enriquecer o ensino e criar aulas envolventes para todas as gerações.</p>
-
-                <h2 class="h2">Conteúdo acadêmico</h2>
-                
-                <p>Como posso acessar o conteúdo acadêmico?
-                  Para acessar o conteúdo acadêmico, basta navegar até a seção "<a href="#academic" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Recursos Acadêmicos</a>" em nosso site. Lá, você encontrará uma coleção cuidadosamente selecionada de materiais atualizados, artigos de pesquisa e recursos relevantes para a sua área de expertise. Seja você um professor recém-formado ou um educador experiente, nossa plataforma foi projetada para fornecer acesso fácil a conteúdos valiosos que podem aprimorar seus métodos de ensino e mantê-lo informado sobre os últimos desenvolvimentos em sua área de interesse. Explore, aprenda e eleve sua prática de ensino com nossos abrangentes recursos acadêmicos.</p>
-              </div>
-          <div class="col-md-4 img-fluid old-english-border">
-              <img src="img/prof_img.jpg" alt="Professor" class="img-fluid">
-              <span class="img-description">Breve descrição da imagem</span>
-          </div>
-        </div>
-    </div>
+<!-- Boas-vindas -->
+<div class="container text-center mt-5">
+  <div class="jumbotron">
+      <h1 class="display-4">Bem-Vindo à <span class="mediumseagreen">CreativeNexa</span></h1>
+      <p class="lead">Uma plataforma dedicada à educação e ao aprendizado criativo.</p>
+      <hr class="my-4">
+      <p>Explore nosso conteúdo e comece sua jornada!</p>
+      <a class="btn btn-light btn-outline-dark border-0 btn-lg btn-custom" href="#start" role="button">Começar</a>
+  </div>
 </div>
 
-<!-- <div class="container mt-2">
-  
-</div> -->
+<section class="container-fluid m-auto" id="start">
+    <div class="row">
+        <div class="newspaper-article">
+          
+              <div class="article-content">
+                <h1 class="h1 article-title">
+                  Conheça o <span class="mediumseagreen">CreativeNexa</span>
+                </h1>
+                <p class="lh-base">Nosso espaço educacional dedicado a professores! Aqui, unimos experiência e inovação. Atualize seu conhecimento com conteúdos acadêmicos recentes e descubra maneiras cativantes de interagir com seus alunos. Junte-se a nós na jornada de enriquecer o ensino e criar aulas envolventes para todas as gerações.</p>
+
+                <h2 class="h2 article-title">Conteúdo acadêmico</h2>
+                
+                <p class="lh-base">Como posso acessar o conteúdo acadêmico?
+                  Para acessar o conteúdo acadêmico, basta navegar até a seção "<a href="#academic" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Recursos Acadêmicos</a>" em nosso site. Lá, você encontrará uma coleção cuidadosamente selecionada de materiais atualizados, artigos de pesquisa e recursos relevantes para a sua área de expertise. Seja você um professor recém-formado ou um educador experiente, nossa plataforma foi projetada para fornecer acesso fácil a conteúdos valiosos que podem aprimorar seus métodos de ensino e mantê-lo informado sobre os últimos desenvolvimentos em sua área de interesse. Explore, aprenda e eleve sua prática de ensino com nossos abrangentes recursos acadêmicos.</p>
+              </div>
+              <div class="d-flex justify-content-between mt-4 bg-white border-0 rounded-1">
+                <div class="col-md-4 img-fluid old-english-border">
+                  <img src="img/prof_img.jpg" alt="Professor Ensinando" class="d-block w-100 m-auto rounded-1">
+                  <span class="img-description">Descrição da Imagem</span>
+              </div>    
+              <div class="col-md-8 bg-body-secondary">
+                <p class="lh-base text-start m-lg-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus modi distinctio rem repellat repudiandae libero fugit soluta? Quae laudantium possimus facere officia architecto laborum recusandae.</p>
+              </div>
+          
+        </div>
+    </div>
+</section>
+
+<!-- <hr class="border border-black border-1 opacity-10"> -->
+
+<section class="container-fluid m-auto">
+  <div class="row">
+    <div class="newspaper-article">
+      <div class="article-content">
+          <h2 class="h2 article-title">Como <span class="text-info">Melhorar a Educação</span> e Despertar o Interesse dos Alunos?</h2>
+
+          <p class="lh-base">Melhorar a educação é um objetivo fundamental para qualquer sociedade que valoriza o desenvolvimento de suas gerações futuras. No entanto, muitas vezes, os métodos tradicionais de ensino podem se mostrar desafiadores para manter o interesse dos alunos e incentivá-los a se aprofundar nas matérias.</p>
+
+          <p class="lh-base">A chave para despertar o interesse dos alunos está na criação de um ambiente de aprendizado estimulante e engajador. Isso pode ser alcançado por meio de:</p>
+
+          <ul class="list-group list-group-flush border border-dark border-1 border-opacity-10 rounded-1">
+            <li class="list-group-item align-items-start"><span class="fw-bold">Metodologias Ativas:</span> Promover a participação ativa dos alunos por meio de debates, projetos práticos e atividades em grupo.</li>
+            <li class="list-group-item align-items-start"><span class="fw-bold">Tecnologia Educacional:</span> Utilizar recursos digitais e plataformas interativas para tornar o aprendizado mais dinâmico e acessível.</li>
+            <li class="list-group-item align-items-start"><span class="fw-bold">Relação com a Vida Real:</span> Relacionar os conteúdos com situações do cotidiano dos alunos, tornando-os mais relevantes e interessantes.</li>
+            <li class="list-group-item align-items-start"><span class="fw-bold">Abordagem Multidisciplinar:</span> Integrar diferentes disciplinas para mostrar a conexão entre os conhecimentos e como eles se aplicam no mundo.</li>
+            <li class="list-group-item align-items-start"><span class="fw-bold">Estímulo à Criatividade:</span> Incentivar os alunos a explorar soluções criativas para desafios e problemas.</li>
+          </ul>
+
+          <div class="d-flex justify-content-between mt-4 bg-body-secondary border-0 rounded-1">
+            <div class="col-md-4 img-fluid old-english-border">
+              <img src="img/gif/teacherexplaining.gif" alt="GIF Animado Professor Explicando" class="d-block w-100 m-auto rounded-1"> <!-- GIF -->
+              <span class="img-description">Descrição da animação</span>
+          </div>    
+          <div class="col-md-8 bg-body-secondary">
+            <p class="lh-base text-start m-lg-5">Ao adotar essas abordagens, os educadores podem criar um ambiente de aprendizado mais envolvente, onde os alunos não apenas absorvem informações, mas também desenvolvem habilidades críticas e uma paixão pelo conhecimento.</p>
+          </div>
+            
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
-<footer class="bg-body-tertiary text-center text-white mt-5 m-auto p-3" data-bs-theme="dark">
+<footer class="bg-body-tertiary text-center text-light mt-5 m-auto p-3 border-0" data-bs-theme="dark">
     <!-- Grid container -->
     <div class="container p-4">
-      <h4>Nos siga em nossas Redes Sociais</h4>
+      <h4 class="h4 text-center text-white-50">Nos siga em nossas redes sociais</h4>
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
@@ -124,48 +204,34 @@
               </svg></i>
         </a>
       </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
+
       <!-- Section: Text -->
       <section class="mb-4">
-        <p>
+        <p class="text-body-tertiary">
             "Um hub dinâmico para professores novos e experientes: atualize conteúdos acadêmicos recentes e descubra formas envolventes de interagir com os alunos, mantendo suas aulas sempre cativantes."
         </p>
       </section>
-      <!-- Section: Text -->
   
       <!-- Section: Links -->
-      <section class="">
+      <section class="container-fluid">
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="h5 text-uppercase">Links</h5>
   
-            <ul class="list-unstyled mb-0">
+            <ul class="list-group list-unstyled mb-0">
               <li>
-                <a href="#!" class="text-white">Link 1</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 1</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 2</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 2</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 3</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 3</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 4</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 4</a>
               </li>
             </ul>
           </div>
@@ -173,20 +239,20 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="h5 text-uppercase">Links</h5>
   
-            <ul class="list-unstyled mb-0">
+            <ul class="list-group list-unstyled mb-0">
               <li>
-                <a href="#!" class="text-white">Link 1</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 1</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 2</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 2</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 3</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 3</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 4</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 4</a>
               </li>
             </ul>
           </div>
@@ -194,63 +260,50 @@
   
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Parcerias</h5>
+            <h5 class="h5 text-uppercase">Parcerias</h5>
   
-            <ul class="list-unstyled mb-0">
+            <ul class="list-group list-unstyled mb-0">
               <li>
-                <a href="#!" class="text-white">Link 1</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 1</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 2</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 2</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 3</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 3</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 4</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 4</a>
               </li>
             </ul>
           </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
+          
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Sobre</h5>
+            <h5 class="h5 text-uppercase">Sobre</h5>
   
-            <ul class="list-unstyled mb-0">
+            <ul class="list-group list-unstyled mb-0">
               <li>
-                <a href="#!" class="text-white">Link 1</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 1</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 2</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 2</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 3</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 3</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Link 4</a>
+                <a href="#!" class="list-group-item-action active" aria-current="true">Link 4</a>
               </li>
             </ul>
           </div>
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
       </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-  
+    </div>  
     <!-- Copyright -->
-    <div class="text-center p-3" 
-    style="
-    background-color: rgba(0, 0, 0, 0.2);
-    border: transparent;
-    border-radius: 10px;
-    ">
-      © 2023 Copyright:
-      <a class="text-white-50 bg-dark" href="index.html" target="_self">CreativeNexa, Inc.</a>
+    <div class="text-center bg-dark rounded-2 border-0 p-3">
+      ©2023 Copyright:
+      <a class="text-white-50" href="index.html" target="_self">CreativeNexa, Inc.</a>
     </div>
-    <!-- Copyright -->
   </footer>
   <!-- Footer - end -->
 
