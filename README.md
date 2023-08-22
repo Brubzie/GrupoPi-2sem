@@ -1,5 +1,4 @@
 # Grupo Pi 2°semestre
-</hr>
 
 ## Layout
 
