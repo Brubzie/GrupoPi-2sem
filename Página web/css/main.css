@@ -1,5 +1,8 @@
 /* Formatação do site ----------------------------
 -------------------------------------------------*/
+
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -16,8 +19,9 @@ body {
                 linear-gradient(-45deg, transparent 75%, #f5f0e1 75%) -50px 0;
     background-size: 100px 100px;
     background-color: #f5f0e1;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.2px;
     font-family: 'Times New Roman';
+    /* color: var(--blue-color); */
 }
 
 .navbar {
@@ -29,13 +33,12 @@ body {
 .mediumseagreen {color: mediumseagreen;}
 
 .btn-custom {
-    font-weight: 550;
     background: white;
 }
 .btn-custom:hover {
     background-color: black;
     color: white;
-    transition: 0.1s;
+    transition: 0.2s;
 }
 
 p {
@@ -125,6 +128,13 @@ p {
     opacity: 1;
 }
 
+/* Tipos de Letter Spacing ----------------------
+-------------------------------------------------*/
+.lp-sm{letter-spacing: -0.5px;}
+.lp-m{letter-spacing: -0.2px;}
+.lp-l{letter-spacing: 1.5px;}
+.lp-xl{letter-spacing: 2.5px;}
+
 /* Estilização da Scrollbar ----------------------
 -------------------------------------------------*/
 ::-webkit-scrollbar-track {
@@ -148,6 +158,32 @@ p {
         border-radius: 5px;
     }
 }
+
+/* Cores de texto -------------------------------
+-------------------------------------------------*/
+:root {
+    --aqua-color: aqua;
+    --aquamarine-color: aquamarine;
+    --red-color: red;
+    --orangered-color: orangered;
+    --orange-color: orange;
+    --pink-color: pink;
+    --blueviolet-color: blueviolet;
+    --green-color: green;
+    --greenyellow-color: greenyellow;
+    --mediumseagreen-color: mediumseagreen;
+    --yellow-color: yellow;
+    --black-color: black;
+    --gray-color: gray;
+    --white-color: white;
+    --whitesmoke-color: whitesmoke;
+    --beige-color: beige;
+    --brown-color: brown;
+}
+
+/* Fontes Internas ------------------------------
+-------------------------------------------------*/
+
 
 /* Fontes Externas ------------------------------
 -------------------------------------------------*/
