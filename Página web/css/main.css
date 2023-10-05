@@ -1,8 +1,5 @@
 /* Formatação do site ----------------------------
 -------------------------------------------------*/
-
-
-
 html, body {
     margin: 0;
     padding: 0;
@@ -21,7 +18,7 @@ body {
     background-color: #f5f0e1;
     letter-spacing: -0.2px;
     font-family: 'Times New Roman';
-    /* color: var(--blue-color); */
+    height: 100%;
 }
 
 .navbar {
@@ -32,15 +29,6 @@ body {
 -------------------------------------------------*/
 .mediumseagreen {color: mediumseagreen;}
 
-.btn-custom {
-    background: white;
-}
-.btn-custom:hover {
-    background-color: black;
-    color: white;
-    transition: 0.2s;
-}
-
 p {
     font-size: 1.2rem;
 }
@@ -49,13 +37,31 @@ p {
     text-shadow: 0px 0px 2px #00000067;
 }
 
-.linha-vertical {
+/* Botão Customízavel ----------------------------
+-------------------------------------------------*/
+.btn-custom {
+    background: white;
+}
+
+.btn-custom:hover {
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+}
+
+/* .linha-vertical {
     width: 1px;
     height: 2vw;
     background-color: #000;
     margin: 0 20px;
+} */
+
+#welcome {
+    margin-top: 100px;
 }
-  
+
+/* Estilização dos conteúdos do container --------
+-------------------------------------------------*/
 .newspaper-article {
     background-color: whitesmoke;
     width: 80%;
@@ -72,7 +78,7 @@ p {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     opacity: 1;
     transition: 0.3s;
-}   
+}
 
 .article-title {
     font-size: 28px;
@@ -87,6 +93,8 @@ p {
     margin-top: 20px;
 }
 
+/* Borda e descrição de mídias -------------------
+-------------------------------------------------*/
 .old-english-border {
     position: relative;
 }
@@ -95,19 +103,17 @@ p {
     display: block;
     max-width: 100%;
     height: auto;
-    border: 0;
-    transition: border 0.3s ease-in-out;
-    transition-delay: 0.1s;
+    border: none;
+    padding: 0;
 }
 
 .old-english-border img:hover {
-    border: 4px solid #8B4513;
-    border-radius: 5px;
-    padding: 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .img-description {
+    padding: 0;
     text-align: center;
     width: 98%;
     position: absolute;
@@ -119,7 +125,7 @@ p {
     padding: 5px 10px;
     border-radius: 5px 5px 0 0;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
 
@@ -128,14 +134,14 @@ p {
     opacity: 1;
 }
 
-/* Tipos de Letter Spacing ----------------------
+/* Tipos de Espaçamento de Letras ----------------
 -------------------------------------------------*/
 .lp-sm{letter-spacing: -0.5px;}
 .lp-m{letter-spacing: -0.2px;}
 .lp-l{letter-spacing: 1.5px;}
 .lp-xl{letter-spacing: 2.5px;}
 
-/* Estilização da Scrollbar ----------------------
+/* Estilização da Barra de Navegação -------------
 -------------------------------------------------*/
 ::-webkit-scrollbar-track {
     background-color: #F4F4F4;
@@ -195,10 +201,11 @@ p {
 }
 
 /*
-    Tipos de format();
-    - opentype (otf)
-    - truetype (ttf)
-    - embedded-opentype
-    - truetype-aat (Apple Advanced Typography)
-    - svg
+    Formatação das fontes externas:
+        format();
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat (Apple Advanced Typography)
+        - svg
 */
